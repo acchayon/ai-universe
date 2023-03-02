@@ -15,9 +15,13 @@ const displayData = allData => {
         <div class="card h-100">
             <img src="${data.image}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                    to additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">Features</h5>
+                <p class="card-text">1.${data.features[0]} <br> 2.${data.features[1]} <br> 3.${data.features[2]}</p>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+            <h4 class="card-title px-3">${data.name}</h4>
+            <button type="button" class="btn ">&rightarrow;</button>
             </div>
         </div>
         `;
