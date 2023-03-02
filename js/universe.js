@@ -13,7 +13,7 @@ const displayData = allData => {
         makeDiv.classList.add('col');
         makeDiv.innerHTML= `
         <div class="card h-100">
-            <img src="..." class="card-img-top" alt="...">
+            <img src="${data.image}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in
