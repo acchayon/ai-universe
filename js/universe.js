@@ -60,7 +60,9 @@ const showDetails = hub =>{
 
     const seeCard = document.getElementById('card');
     seeCard.innerHTML = `
-    <img src="${hub.image_link[0]}" class="card-img-top" alt="...">
+    <img src="${hub.image_link[0]}" class="card-img-top position-relative" alt="...">
+    <button type="button" class="btn btn-danger w-50 rounded-pill position-absolute top-0 end-0">
+    ${hub.accuracy.score * 100 ? hub.accuracy.score * 100 : 'no accuracy'}% Accuracy</button>
     <h5>${hub.input_output_examples[0].input ? hub.input_output_examples[0].input : 'No Question'}</h5>
     <p>${hub.input_output_examples[0].output ? hub.input_output_examples[0].output : 'No! Not Yet! Take a break!!!'}</p>
     `;
