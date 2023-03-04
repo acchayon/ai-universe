@@ -1,7 +1,7 @@
 const loadData = () =>{
     fetch('https://openapi.programming-hero.com/api/ai/tools')
     .then(res => res.json())
-    .then(data => displayData(data.data.tools.slice(0,6)))
+    .then(data => displayData(data.data.tools))
     
 }
 
@@ -29,7 +29,10 @@ const displayData = allData => {
             </div>
             <hr>
             <div class="d-flex justify-content-between">
+            <div>
             <h4 class="card-title px-3">${data.name}</h4>
+            <p class="mx-3"><i class="fa-solid fa-calendar-days"></i> 11/01/2022<p>
+            </div>
             <button onclick="loadDetails('${data.id}')" type="button" class="btn btn-outline-success m-3" data-bs-toggle="modal" data-bs-target="#exampleModal">&rightarrow;</button>
             </div>
         </div>
@@ -44,6 +47,8 @@ const displayData = allData => {
     toggleLoader(false)
     
 }
+
+
 
 
 
@@ -102,5 +107,4 @@ const toggleLoader = isLoading => {
         spinLoader.classList.add('d-none');
     }
 }
-
 loadData()
