@@ -41,19 +41,53 @@
 
 
         <section class="text-center">
-            <button id="see-more" type="button" class="btn btn-danger m-3 ">See More</button>
+            <button onclick="seeAll()" id="see-more" type="button" class="btn btn-danger m-3 ">See More</button>
         </section>
 
         <!-- modal section -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="modal-header position-relative">
+
+                        <button type="button" class="btn-close position-absolute top-0 start-0" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        ...
+                    <div class="modal-body d-flex bg-primary-subtle">
+                        <div class="left p-5">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body p-2">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <div class="d-flex justify-content-between">
+                                        <p id="price-1" class="card-text m-1 p-1"></p>
+                                        <p id="price-2" class="card-text m-1 p-1"></p>
+                                        <p id="price-3" class="card-text m-1 p-1"></p>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <h5>Features</h5>
+                                            <li id="f-1"></li>
+                                            <li id="f-2"></li>
+                                            <li id="f-3"></li>
+                                        </div>
+                                        <div>
+                                            <h5>Integration</h5>
+                                            <li id="i-1"></li>
+                                            <li id="i-2"></li>
+                                            <li id="i-3"></li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="right-side" class="right">
+                            <div id="card" class="card p-3" style="width: 18rem;">
+
+                                <div class="card-body">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
